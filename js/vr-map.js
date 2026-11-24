@@ -6,9 +6,11 @@
   if (!el || !data || !window.L) return;
   var D = JSON.parse(data.textContent), es = D.lang === "es", W = D.w, H = D.h, Z = 5;
   var T = es ? {found: "Encontrado", mark: "Marcar como encontrado", unmark: "Desmarcar", count: "Encontrados",
-                hide: "Ocultar encontrados", reset: "Borrar progreso", sure: "¿Borrar tu progreso?"}
+                hide: "Ocultar encontrados", reset: "Borrar progreso", sure: "¿Borrar tu progreso?",
+                search: "Buscar en el mapa…", next: "Siguiente sin encontrar →", none: "¡Todo encontrado!"}
              : {found: "Found", mark: "Mark as found", unmark: "Unmark", count: "Found", hide: "Hide found",
-                reset: "Reset progress", sure: "Reset your progress?"};
+                reset: "Reset progress", sure: "Reset your progress?", search: "Search the map…",
+                next: "Next unfound →", none: "All found!"};
   var KEY = "vr-map-found", HIDE = "vr-map-hide-found";
   function load(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode: keep in memory */ } }
@@ -26,8 +28,15 @@
   map.setMaxBounds(bounds.pad(0.15));
   map.attributionControl.setPrefix(false);
 
-  var layers = {}, markers = {}, catOn = {};
-  D.cats.forEach(function (c) { layers[c.id] = L.layerGroup().addTo(map); catOn[c.id] = true; });
+  var layers = {}, markers = {}, catOn = {}, query = "";
+  var want = (function () {  // ?layer=mods or a page that opens on one layer (data "only")
+    try { var q = new URLSearchParams(location.search).get("layer"); if (q) return q.split(","); } catch (e) {}
+    return D.only || null;
+  })();
+  D.cats.forEach(function (c) {
+    layers[c.id] = L.layerGroup().addTo(map);
+    catOn[c.id] = !want || want.indexOf(c.id) >= 0;
+  });
   function popupHtml(p) {
     var f = !!found[p.id];
     return "<b>" + p.n + ". " + p.t + "</b>" + (f ? ' <span class="vrok">✓ ' + T.found + "</span>" : "") + "<br>" + p.d +
@@ -49,13 +58,20 @@
     D.pins.forEach(function (p) {
       var m = markers[p.n], f = !!found[p.id];
       if (f) n++;
-      var show = catOn[p.cat] && !(hideFound && f);
+      var hay = (p.t + " " + p.d).toLowerCase();
+      var show = catOn[p.cat] && !(hideFound && f) && (!query || hay.indexOf(query) >= 0);
       if (show && !layers[p.cat].hasLayer(m)) m.addTo(layers[p.cat]);
       if (!show && layers[p.cat].hasLayer(m)) layers[p.cat].removeLayer(m);
       var ic = m.getElement && m.getElement();
       if (ic) ic.classList.toggle("vrdone", f);
     });
     if (counter) counter.textContent = T.count + ": " + n + "/" + D.pins.length;
+    D.cats.forEach(function (c) {
+      var all = D.pins.filter(function (p) { return p.cat === c.id; });
+      var got = all.filter(function (p) { return found[p.id]; }).length;
+      var s = document.querySelector('.vrlegend [data-cnt="' + c.id + '"]');
+      if (s) s.textContent = " " + got + "/" + all.length;
+    });
     [].slice.call(document.querySelectorAll("[data-pin]")).forEach(function (a) {
       var p = D.pins[a.getAttribute("data-pin") - 1];
       if (p) a.parentNode.classList.toggle("vrdone-item", !!found[p.id]);
@@ -78,10 +94,13 @@
   var ctl = L.control({position: "topright"});
   ctl.onAdd = function () {
     var box = L.DomUtil.create("div", "vrlegend");
-    box.innerHTML = D.cats.map(function (c) {
-      return '<label><input type="checkbox" checked data-cat="' + c.id + '"><i style="background:' + c.color + '"></i>' + c.name + "</label>";
-    }).join("") + '<div class="vrprog"><b class="vrcount"></b><label><input type="checkbox" data-hide>' + T.hide +
-      '</label><button type="button" class="vrlink" data-reset>' + T.reset + "</button></div>";
+    box.innerHTML = '<input type="search" class="vrsearch" placeholder="' + T.search + '" aria-label="' + T.search + '">' +
+      D.cats.map(function (c) {
+        return '<label><input type="checkbox"' + (catOn[c.id] ? " checked" : "") + ' data-cat="' + c.id + '"><i style="background:' +
+          c.color + '"></i>' + c.name + '<small data-cnt="' + c.id + '"></small></label>';
+      }).join("") + '<div class="vrprog"><b class="vrcount"></b><button type="button" class="vrbtn vrnext" data-next>' + T.next +
+      '</button><label><input type="checkbox" data-hide>' + T.hide + '</label><button type="button" class="vrlink" data-reset>' +
+      T.reset + "</button></div>";
     L.DomEvent.disableClickPropagation(box);
     counter = box.querySelector(".vrcount");
     box.querySelector("[data-hide]").checked = !!hideFound;
@@ -89,6 +108,20 @@
       if (e.target.hasAttribute("data-hide")) { hideFound = e.target.checked; save(HIDE, hideFound); }
       else { catOn[e.target.getAttribute("data-cat")] = e.target.checked; }
       refresh();
+    });
+    box.querySelector(".vrsearch").addEventListener("input", function (e) {
+      query = e.target.value.toLowerCase().trim();
+      refresh();
+      var hits = D.pins.filter(function (p) { return query && (p.t + " " + p.d).toLowerCase().indexOf(query) >= 0 && catOn[p.cat]; });
+      if (hits.length === 1) go(hits[0].n, true);
+    });
+    var last = 0;
+    box.querySelector("[data-next]").addEventListener("click", function () {
+      var todo = D.pins.filter(function (p) { return !found[p.id] && catOn[p.cat]; });
+      if (!todo.length) { window.alert(T.none); return; }
+      var nxt = todo.filter(function (p) { return p.n > last; })[0] || todo[0];
+      last = nxt.n;
+      go(nxt.n, true);
     });
     box.querySelector("[data-reset]").addEventListener("click", function () {
       if (window.confirm(T.sure)) { found = {}; save(KEY, found); refresh(); }
