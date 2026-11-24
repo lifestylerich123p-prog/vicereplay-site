@@ -38,14 +38,26 @@
     return box;
   };
   ctl.addTo(map);
+  var bySlug = {};
+  D.pins.forEach(function (p) { bySlug[p.id] = p.n; });
+  function go(n, smooth) {
+    var m = markers[n];
+    if (!m) return false;
+    el.scrollIntoView({behavior: smooth ? "smooth" : "auto", block: "center"});
+    map.flyTo(m.getLatLng(), 4, {duration: smooth ? 0.8 : 0.01});
+    setTimeout(function () { m.openPopup(); }, smooth ? 850 : 60);
+    return true;
+  }
   [].slice.call(document.querySelectorAll("[data-pin]")).forEach(function (a) {
     a.addEventListener("click", function (e) {
-      var m = markers[a.getAttribute("data-pin")];
-      if (!m) return;
+      var n = a.getAttribute("data-pin");
+      if (!markers[n]) return;
       e.preventDefault();
-      el.scrollIntoView({behavior: "smooth", block: "center"});
-      map.flyTo(m.getLatLng(), 4, {duration: 0.8});
-      setTimeout(function () { m.openPopup(); }, 850);
+      var p = D.pins[n - 1];
+      if (p && history.replaceState) history.replaceState(null, "", "#" + p.id);  // shareable link to this spot
+      go(n, true);
     });
   });
+  var h = decodeURIComponent((location.hash || "").slice(1));  // /guides/gta-6-map-leonida-places/#ufo-abduction
+  if (h && bySlug[h]) go(bySlug[h], false);
 })();
