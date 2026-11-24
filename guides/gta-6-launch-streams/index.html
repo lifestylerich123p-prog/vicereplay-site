@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,22 +65,23 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/gta-6-launch-live/">News</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
 <main>
 <h1>GTA&nbsp;6 launch night: <span>where to watch</span></h1>
 <p class="meta">Updated November 17, 2026 · Vice Replay</p>
 <div class="note update"><b>Update, Nov 24:</b> Launch night is over. Who won it: <a href="/guides/gta-6-streaming-records/">GTA 6 streaming records</a>.</div>
-<img class="lead" src="https://vicereplay.com/og/gta-6-launch-streams.jpg" width="1200" height="630" alt="GTA 6 Launch Streams: YouTube&#x27;s 24-Hour Livestream and Kai Cenat&#x27;s 100% Marathon" fetchpriority="high" decoding="async">
 <p class="lede">GTA 6 might be the biggest launch night in streaming history. Here's what's been announced, so you know where to watch if you're not playing yet.</p>
-<h2>YouTube's 24-hour GTA 6 livestream</h2>
+<img class="lead" src="https://vicereplay.com/og/gta-6-launch-streams.jpg" width="1200" height="630" alt="GTA 6 Launch Streams: YouTube&#x27;s 24-Hour Livestream and Kai Cenat&#x27;s 100% Marathon" fetchpriority="high" decoding="async">
+<nav class="toc" aria-label="On this page"><b>On this page</b><a href="#youtube-s-24-hour-gta-6-livestream">YouTube's 24-hour GTA 6 livestream</a><a href="#kai-cenat-s-100-marathon">Kai Cenat's 100% marathon</a><a href="#watching-without-spoilers">Watching without spoilers</a><a href="#sources">Sources</a></nav>
+<h2 id="youtube-s-24-hour-gta-6-livestream">YouTube's 24-hour GTA 6 livestream</h2>
 <p>YouTube is hosting <b>"Launch Day: YouTube's 24 Hour GTAVI Livestream"</b> with more than 30 creators. According to reports, a pre-show hosted by RDCWorld starts at <b>11 PM Eastern on November 18</b>, and the 24-hour main stream begins at <b>midnight Eastern on November 19</b>, with streams in several languages.</p>
-<h2>Kai Cenat's 100% marathon</h2>
+<h2 id="kai-cenat-s-100-marathon">Kai Cenat's 100% marathon</h2>
 <p>Kai Cenat has said he wants to complete GTA 6 to 100% on stream: not just the story, but every optional extra. How long that takes depends on how big the game really is, and nobody knows that yet.</p>
-<h2>Watching without spoilers</h2>
+<h2 id="watching-without-spoilers">Watching without spoilers</h2>
 <p>Streams will show the story live. If you want to go in blind, skip the marathons for the first few days and mute "GTA 6" on social apps. <a href="/guides/gta-6-launch-checklist/">Our launch checklist</a> has more.</p>
 <div class="note">Plans can change on launch night. Check each creator's own channel for the final times.</div>
 <div class="box"><h3>Watch more</h3><div class="btns"><a class="item" href="https://www.youtube.com/watch?v=DIFRHVF6T0E" target="_blank" rel="noopener">Watch this on YouTube<span aria-hidden="true">→</span></a><a class="item" href="https://www.youtube.com/@vicereplaytv-q8s?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Vice Replay<small>New GTA 6 news and Shorts every day</small><span aria-hidden="true">→</span></a></div></div>
-<div class="sources"><h2>Sources</h2><ul class="list"><li><a href="https://www.notebookcheck.net/YouTube-to-host-24-hour-GTA-6-release-date-livestream-with-launch-day-gameplay.1449040.0.html" target="_blank" rel="noopener">Notebookcheck: YouTube 24-hour GTA 6 livestream</a></li><li><a href="https://www.gtaboom.com/gta-6-is-getting-a-24-hour-youtube-livestream-with-more-than-30-creators-5ad2" target="_blank" rel="noopener">GTA BOOM: 24-hour livestream with 30+ creators</a></li><li><a href="https://streamscharts.com/news/youtube-announces-24-hour-gta-6-launch-marathon-global-creators" target="_blank" rel="noopener">Streams Charts: YouTube launch marathon</a></li><li><a href="https://sportskeeda.com/us/streamers/news-kai-cenat-hold-gta-6-100-playthrough-marathon-upon-game-s-release" target="_blank" rel="noopener">Sportskeeda: Kai Cenat 100% marathon</a></li><li><a href="https://www.gtaboom.com/kai-cenat-wants-to-100-gta-6-in-one-nonstop-marathon-d0ed" target="_blank" rel="noopener">GTA BOOM: Kai Cenat wants to 100% GTA 6</a></li></ul></div>
+<div class="sources"><h2 id="sources">Sources</h2><ul class="list"><li><a href="https://www.notebookcheck.net/YouTube-to-host-24-hour-GTA-6-release-date-livestream-with-launch-day-gameplay.1449040.0.html" target="_blank" rel="noopener">Notebookcheck: YouTube 24-hour GTA 6 livestream</a></li><li><a href="https://www.gtaboom.com/gta-6-is-getting-a-24-hour-youtube-livestream-with-more-than-30-creators-5ad2" target="_blank" rel="noopener">GTA BOOM: 24-hour livestream with 30+ creators</a></li><li><a href="https://streamscharts.com/news/youtube-announces-24-hour-gta-6-launch-marathon-global-creators" target="_blank" rel="noopener">Streams Charts: YouTube launch marathon</a></li><li><a href="https://sportskeeda.com/us/streamers/news-kai-cenat-hold-gta-6-100-playthrough-marathon-upon-game-s-release" target="_blank" rel="noopener">Sportskeeda: Kai Cenat 100% marathon</a></li><li><a href="https://www.gtaboom.com/kai-cenat-wants-to-100-gta-6-in-one-nonstop-marathon-d0ed" target="_blank" rel="noopener">GTA BOOM: Kai Cenat wants to 100% GTA 6</a></li></ul></div>
 <div class="related"><h2>Related guides</h2><div class="cards"><a class="card pic" href="/guides/gta-6-streaming-records/"><img src="/og/t/gta-6-streaming-records.webp" width="480" height="252" alt="GTA 6 Streaming Records: Most-Watched Streamers and Every Number" loading="lazy"><span><b>GTA 6 Streaming Records: Most-Watched Streamers and Every Number</b><small>GTA 6&#x27;s launch on stream, checked: a 7.91 million peak, 125.47 million hours in 24 hours, and the most-watched creators (IShowSpeed, TheBurntPeanut, alanzoka). No spoilers.</small></span></a><a class="card pic" href="/guides/gta-6-make-money/"><img src="/og/t/gta-6-make-money.webp" width="480" height="252" alt="How to Make Money Fast in GTA 6: The Best Ways, Early to Late Game" loading="lazy"><span><b>How to Make Money Fast in GTA 6: The Best Ways, Early to Late Game</b><small>How to make money fast in GTA 6: stolen cars early, jewelry and high-end cars in Chapter 3, bank vaults late, plus the money cheat and how to keep your cash safe. Light on spoilers.</small></span></a><a class="card pic" href="/guides/gta-6-game-awards/"><img src="/og/t/gta-6-game-awards.webp" width="480" height="252" alt="GTA 6 at The Game Awards 2026: All 8 Nominations, Rivals and Odds" loading="lazy"><span><b>GTA 6 at The Game Awards 2026: All 8 Nominations, Rivals and Odds</b><small>GTA 6 has 8 nominations at The Game Awards 2026, the most of any game. Every category, every rival, our odds, the record it can&#x27;t break, and how to watch on Dec 10.</small></span></a><a class="card pic" href="/guides/gta-6-launch-week-numbers/"><img src="/og/t/gta-6-launch-week-numbers.webp" width="480" height="252" alt="GTA 6 Sales and Records: Every Launch Week Number vs GTA 5 (Checked)" loading="lazy"><span><b>GTA 6 Sales and Records: Every Launch Week Number vs GTA 5 (Checked)</b><small>How much has GTA 6 made? Take-Two&#x27;s official $3.79B vs GTA 5&#x27;s $800M, the 99 Metacritic score, the 7.9M streaming peak and the most-watched streams, with sources.</small></span></a></div></div>
 </main>
 <footer>Business &amp; sponsors: <a href="mailto:contact@vicereplay.com">contact@vicereplay.com</a> · <a href="/contact/">Work with us</a> · <a href="/about/">About us</a><br>Vice Replay is a fan channel and is not affiliated with Rockstar Games or Take-Two Interactive. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. As an Amazon Associate I earn from qualifying purchases: some links on this site are affiliate links, at no extra cost to you.</footer>

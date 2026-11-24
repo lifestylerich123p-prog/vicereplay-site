@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,7 +65,7 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/gta-6-launch-live/">News</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
 <main>
 <h1>This page went <span>off the map</span></h1>
 <p class="lede">The link is old or mistyped. Here's what's new on Vice Replay instead.</p>

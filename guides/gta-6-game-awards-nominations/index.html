@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,21 +65,22 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/gta-6-launch-live/">News</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
 <main>
 <h1>GTA&nbsp;6 is up for <span>Game of the Year</span></h1>
 <p class="meta">Updated November 17, 2026 · Vice Replay</p>
 <div class="note update"><b>Update, Nov 24:</b> The show is Thursday, December 10, at 7:30 PM Eastern. Our full preview: <a href="/guides/gta-6-game-awards/">GTA 6 at The Game Awards 2026</a>.</div>
-<img class="lead" src="https://vicereplay.com/og/gta-6-game-awards-nominations.jpg" width="1200" height="630" alt="GTA 6 at The Game Awards 2026: 8 Nominations Including Game of the Year" fetchpriority="high" decoding="async">
 <p class="lede">The Game Awards 2026 nominations came out on November 17, two days before GTA 6 even launched, and GTA 6 got <b>8 nominations</b>, including <b>Game of the Year</b>.</p>
-<h2>Lucia's actress, confirmed</h2>
+<img class="lead" src="https://vicereplay.com/og/gta-6-game-awards-nominations.jpg" width="1200" height="630" alt="GTA 6 at The Game Awards 2026: 8 Nominations Including Game of the Year" fetchpriority="high" decoding="async">
+<nav class="toc" aria-label="On this page"><b>On this page</b><a href="#lucia-s-actress-confirmed">Lucia's actress, confirmed</a><a href="#why-this-is-unusual">Why this is unusual</a><a href="#when-are-the-winners-revealed">When are the winners revealed?</a><a href="#sources">Sources</a></nav>
+<h2 id="lucia-s-actress-confirmed">Lucia's actress, confirmed</h2>
 <p>One nomination finally confirmed something fans had guessed since the first trailer: <b>Manni L. Perez</b> plays Lucia. She's nominated for Best Performance. Jason's actor still hasn't been officially revealed.</p>
-<h2>Why this is unusual</h2>
+<h2 id="why-this-is-unusual">Why this is unusual</h2>
 <p>Games have to be out by the eligibility cutoff, and GTA 6 launches November 19, just inside it. Jurors got very little time with the game before voting on nominations.</p>
-<h2>When are the winners revealed?</h2>
+<h2 id="when-are-the-winners-revealed">When are the winners revealed?</h2>
 <p>The Game Awards 2026 show is on <b>December 10, 2026</b>, at the Peacock Theater in Los Angeles.</p>
 <div class="box"><h3>Watch</h3><div class="btns"><a class="item" href="https://www.youtube.com/watch?v=xvudsg_o6ow" target="_blank" rel="noopener">GTA 6 just got nominated for Game of the Year<small>Vice Replay Short</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.youtube.com/watch?v=_5ZWAUY75y4" target="_blank" rel="noopener">Lucia's actress is CONFIRMED<small>Vice Replay Short</small><span aria-hidden="true">→</span></a></div></div>
-<div class="sources"><h2>Sources</h2><ul class="list"><li><a href="https://insider-gaming.com/gta-6-lucia-actress-officially-revealed-during-2026-game-awards-nominations/" target="_blank" rel="noopener">Insider Gaming: Lucia&#x27;s actress revealed</a></li><li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-lucia-actor-revealed-thanks-to-the-game-awards-best-performance-nomination-and-yes-its-exactly-who-everyone-expected/" target="_blank" rel="noopener">GamesRadar: Lucia actor revealed</a></li><li><a href="https://www.destructoid.com/gta-6-the-game-awards-tga-nominations-2026/" target="_blank" rel="noopener">Destructoid: TGA 2026 nominations</a></li><li><a href="https://www.forbes.com/sites/paultassi/2026/11/17/the-6-game-of-the-year-nominees-at-the-game-awards--did-gta-6-make-it/" target="_blank" rel="noopener">Forbes: Game of the Year nominees</a></li></ul></div>
+<div class="sources"><h2 id="sources">Sources</h2><ul class="list"><li><a href="https://insider-gaming.com/gta-6-lucia-actress-officially-revealed-during-2026-game-awards-nominations/" target="_blank" rel="noopener">Insider Gaming: Lucia&#x27;s actress revealed</a></li><li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-lucia-actor-revealed-thanks-to-the-game-awards-best-performance-nomination-and-yes-its-exactly-who-everyone-expected/" target="_blank" rel="noopener">GamesRadar: Lucia actor revealed</a></li><li><a href="https://www.destructoid.com/gta-6-the-game-awards-tga-nominations-2026/" target="_blank" rel="noopener">Destructoid: TGA 2026 nominations</a></li><li><a href="https://www.forbes.com/sites/paultassi/2026/11/17/the-6-game-of-the-year-nominees-at-the-game-awards--did-gta-6-make-it/" target="_blank" rel="noopener">Forbes: Game of the Year nominees</a></li></ul></div>
 <div class="related"><h2>Related guides</h2><div class="cards"><a class="card pic" href="/guides/gta-6-game-awards/"><img src="/og/t/gta-6-game-awards.webp" width="480" height="252" alt="GTA 6 at The Game Awards 2026: All 8 Nominations, Rivals and Odds" loading="lazy"><span><b>GTA 6 at The Game Awards 2026: All 8 Nominations, Rivals and Odds</b><small>GTA 6 has 8 nominations at The Game Awards 2026, the most of any game. Every category, every rival, our odds, the record it can&#x27;t break, and how to watch on Dec 10.</small></span></a><a class="card pic" href="/guides/gta-6-gift-guide/"><img src="/og/t/gta-6-gift-guide.webp" width="480" height="252" alt="GTA 6 Gift Guide 2026: Best Gifts for a GTA 6 Fan (PS5 and Xbox)" loading="lazy"><span><b>GTA 6 Gift Guide 2026: Best Gifts for a GTA 6 Fan (PS5 and Xbox)</b><small>Buying for a GTA 6 fan? The game itself, storage for the 212 GB install, a second controller and a headset, plus what to check before you buy (console, region, digital vs box).</small></span></a><a class="card pic" href="/guides/gta-6-launch-live/"><img src="/og/t/gta-6-launch-live.webp" width="480" height="252" alt="GTA 6 Live Updates: Patches, Records and News After Launch" loading="lazy"><span><b>GTA 6 Live Updates: Patches, Records and News After Launch</b><small>GTA 6 news, newest first: patch notes, sales and streaming records, The Game Awards and PC news, all checked in 2+ sources. Updated every day.</small></span></a><a class="card pic" href="/guides/gta-6-easter-eggs/"><img src="/og/t/gta-6-easter-eggs.webp" width="480" height="252" alt="GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)" loading="lazy"><span><b>GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)</b><small>The best GTA 6 easter eggs players found in launch week: an actual egg nest on a tower, a UFO abduction, the Skunk Ape, Dexter&#x27;s apartment and a portal to 2002&#x27;s Vice City. No story spoilers.</small></span></a></div></div>
 </main>
 <footer>Business &amp; sponsors: <a href="mailto:contact@vicereplay.com">contact@vicereplay.com</a> · <a href="/contact/">Work with us</a> · <a href="/about/">About us</a><br>Vice Replay is a fan channel and is not affiliated with Rockstar Games or Take-Two Interactive. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. As an Amazon Associate I earn from qualifying purchases: some links on this site are affiliate links, at no extra cost to you.</footer>

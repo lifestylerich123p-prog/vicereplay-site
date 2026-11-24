@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,10 +65,13 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/gta-6-launch-live/">News</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
 <main>
-<div class="banner"><img src="/img/night-streets-720.webp" srcset="/img/night-streets-720.webp 720w, /img/night-streets-1440.webp 1440w" sizes="(min-width: 760px) 720px, 100vw" width="1440" height="810" alt="" fetchpriority="high"><h1>Vice Replay <span>links</span></h1></div>
-<p class="lede">GTA's wildest moments. On replay.</p>
+<h1>Vice Replay <span>links</span></h1>
+<p class="lede">GTA's wildest moments. On replay. Fresh GTA 6 news first, then deals and our channels.</p>
+<h2>Latest</h2>
+<div class="cards"><a class="card pic" href="/guides/gta-6-launch-live/"><img src="/og/t/gta-6-launch-live.webp" width="480" height="252" alt="GTA 6 Live Updates: Patches, Records and News After Launch" loading="lazy"><span><b>GTA 6 Live Updates: Patches, Records and News After Launch</b><small>GTA 6 news, newest first: patch notes, sales and streaming records, The Game Awards and PC news, all checked in 2+ sources. Updated every day.</small></span></a><a class="card pic" href="/guides/gta-6-deals/"><img src="/og/t/gta-6-deals.webp" width="480" height="252" alt="GTA 6 Deals and Discount Codes: What&#x27;s Real This Week (Checked)" loading="lazy"><span><b>GTA 6 Deals and Discount Codes: What&#x27;s Real This Week (Checked)</b><small>Every real way to pay less around GTA 6 this week, checked in 2+ sources: GTA 6 itself isn&#x27;t discounted, PS Plus is up to 33% off, the DualSense is $54, and &#x27;free GTA 6 codes&#x27; are scams.</small></span></a><a class="card pic" href="/guides/gta-6-easter-eggs/"><img src="/og/t/gta-6-easter-eggs.webp" width="480" height="252" alt="GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)" loading="lazy"><span><b>GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)</b><small>The best GTA 6 easter eggs players found in launch week: an actual egg nest on a tower, a UFO abduction, the Skunk Ape, Dexter&#x27;s apartment and a portal to 2002&#x27;s Vice City. No story spoilers.</small></span></a><a class="card pic" href="/guides/gta-6-hacker-sentence/"><img src="/og/t/gta-6-hacker-sentence.webp" width="480" height="252" alt="Did They Catch the GTA 6 Hacker? Arion Kurtaj&#x27;s Sentence Explained (Nov 2026)" loading="lazy"><span><b>Did They Catch the GTA 6 Hacker? Arion Kurtaj&#x27;s Sentence Explained (Nov 2026)</b><small>Yes: Arion Kurtaj, who hacked Rockstar in 2022, was sentenced to 7 years on Nov 23, 2026 and released on licence the same day. Why, and what the court order means.</small></span></a></div>
+<div class="btns" style="margin-top:12px"><a class="item" href="https://www.youtube.com/@vicereplaytv-q8s?sub_confirmation=1" target="_blank" rel="noopener">▶️ Watch on YouTube<small>Daily GTA 6 Shorts and news</small><span aria-hidden="true">→</span></a></div>
 <div class="box"><h3>🔥 Black Friday deals on Amazon</h3><div class="btns"><a class="item" href="https://www.amazon.com/deals?tag=vicereplay-20" target="_blank" rel="sponsored noopener">🛍️ Amazon&#x27;s full Black Friday sale<small>TVs, consoles, everything on sale through Nov 30</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=PS5+DualSense+wireless+controller&tag=vicereplay-20" target="_blank" rel="sponsored noopener">🎮 PS5 DualSense controller: $54.99<small>usually $74 · the best GTA 6 deal this week</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=PlayStation+Pulse+Elite+wireless+headset&tag=vicereplay-20" target="_blank" rel="sponsored noopener">🎧 PlayStation Pulse Elite headset: ~$110<small>usually $150</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=PS5+compatible+2TB+NVMe+SSD+with+heatsink&tag=vicereplay-20" target="_blank" rel="sponsored noopener">💾 2 TB PS5 SSD with heatsink<small>GTA 6 is 212 GB: the upgrade that fits</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/dp/B0H6K928WL?tag=vicereplay-20" target="_blank" rel="sponsored noopener">🌴 GTA 6 for PS5<small>full price at US stores right now</small><span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/tryprimefree?tag=vicereplay-20" target="_blank" rel="sponsored noopener">📦 Free 30-day Amazon Prime trial<small>fast delivery on all of the above</small><span aria-hidden="true">→</span></a></div><p class="sources" style="margin:10px 0 0">Prices checked Nov 24 and they change fast. Affiliate links: as an Amazon Associate we earn from qualifying purchases, at no extra cost to you. <a href="/guides/gta-6-black-friday/">All GTA 6 Black Friday deals</a></p></div>
 <div class="btns">
 <a class="item" href="/guides/gta-6-deals/">🏷️ GTA 6 deals and discount codes<small>What's real this week, and the "free code" scams</small><span aria-hidden="true">→</span></a>

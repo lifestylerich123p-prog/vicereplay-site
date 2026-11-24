@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,23 +65,24 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/es/">Guías</a><a href="/es/equipo/">Equipo</a><a href="https://www.youtube.com/channel/UCWPnqYqYu9_CLsJ8Bk1MPgQ" target="_blank" rel="noopener">YouTube</a><a href="/guides/gta-6-unlock-time/">EN</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/es/guias/gta-6-lanzamiento-en-vivo/">Noticias</a><a href="/es/">Guías</a><a href="/es/equipo/">Equipo</a><a href="https://www.youtube.com/channel/UCWPnqYqYu9_CLsJ8Bk1MPgQ" target="_blank" rel="noopener">YouTube</a><a href="/guides/gta-6-unlock-time/">EN</a></div></nav>
 <main>
 <h1>GTA&nbsp;6: <span>¿qué medianoche?</span></h1>
 <p class="meta">Actualizado el 18 de noviembre de 2026 · Vice Replay</p>
 <div class="note update"><b>Actualización, 24 nov:</b> GTA 6 ya salió: se desbloqueó el 19 de noviembre de 2026. Esta página explica cómo funcionó el lanzamiento. Lo nuevo: <a href="/es/guias/gta-6-lanzamiento-en-vivo/">noticias en vivo</a>.</div>
-<img class="lead" src="https://vicereplay.com/og/hora-de-lanzamiento-gta-6.jpg" width="1200" height="630" alt="GTA 6: a qué hora se desbloquea en cada país" fetchpriority="high" decoding="async">
 <p class="lede">GTA 6 sale el jueves 19 de noviembre de 2026 en PS5 y Xbox Series X|S, y se desbloquea a la <b>medianoche hora local</b> en cada región.</p>
-<h2>Quién juega primero</h2>
+<img class="lead" src="https://vicereplay.com/og/hora-de-lanzamiento-gta-6.jpg" width="1200" height="630" alt="GTA 6: a qué hora se desbloquea en cada país" fetchpriority="high" decoding="async">
+<nav class="toc" aria-label="En esta página"><b>En esta página</b><a href="#quién-juega-primero">Quién juega primero</a><a href="#latinoamérica-y-ee-uu">Latinoamérica y EE. UU.</a><a href="#xbox-cloud-gaming">Xbox Cloud Gaming</a><a href="#el-truco-de-nueva-zelanda">El truco de Nueva Zelanda</a><a href="#sources">Sources</a></nav>
+<h2 id="quién-juega-primero">Quién juega primero</h2>
 <p>Nueva Zelanda llega primero a la medianoche: según las fichas de PlayStation Store, alrededor de las 6 AM hora del Este de EE. UU. del 18 de noviembre. Luego Australia, Japón, India, Europa y Reino Unido.</p>
-<h2>Latinoamérica y EE. UU.</h2>
+<h2 id="latinoamérica-y-ee-uu">Latinoamérica y EE. UU.</h2>
 <p>Algunos reportes dicen que en América se desbloquea la noche del 18 de noviembre; otros esperan la medianoche de cada zona horaria. Lo más seguro: revisa la hora en la página de GTA 6 en la tienda de tu consola.</p>
-<h2>Xbox Cloud Gaming</h2>
+<h2 id="xbox-cloud-gaming">Xbox Cloud Gaming</h2>
 <p>Según Forbes, empieza a la <b>1 AM hora del Este</b>, no a la medianoche.</p>
-<h2>El truco de Nueva Zelanda</h2>
+<h2 id="el-truco-de-nueva-zelanda">El truco de Nueva Zelanda</h2>
 <p>Cambiar la región de tu Xbox a Nueva Zelanda no está confirmado para GTA 6 y puede poner en riesgo tu cuenta. No vale la pena por unas horas.</p>
 <div class="box"><h3>Gear for GTA 6 (affiliate links)</h3><p>If you're short on space for the 212 GB install, these searches show current options and prices:</p><div class="btns"><a class="item" href="https://www.amazon.com/s?k=PS5+compatible+2TB+NVMe+SSD+with+heatsink&tag=vicereplay-20" target="_blank" rel="sponsored noopener">PS5 storage upgrade (2TB NVMe SSD with heatsink)<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=Xbox+Series+X+S+storage+expansion+card+2TB&tag=vicereplay-20" target="_blank" rel="sponsored noopener">Xbox Series X|S storage expansion card<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/tryprimefree?tag=vicereplay-20" target="_blank" rel="sponsored noopener">Free 30-day Amazon Prime trial: fast delivery<span aria-hidden="true">→</span></a></div><p class="sources" style="margin:10px 0 0">Affiliate links: as an Amazon Associate I earn from qualifying purchases, at no extra cost to you. We haven't tested these products; check reviews and compatibility before you buy. <a href="/gear/">All gear picks</a></p></div>
-<h2>Respuestas rápidas</h2><div class="box"><h3>¿A qué hora sale GTA 6?</h3><p style="margin:0">A la medianoche hora local del 19 de noviembre de 2026, región por región. Revisa la hora exacta en la tienda de tu consola.</p></div><div class="sources"><h2>Sources</h2><ul class="list"><li><a href="https://www.pushsquare.com/guides/gta-6-release-times-when-can-you-start-playing" target="_blank" rel="noopener">Push Square</a></li><li><a href="https://www.forbes.com/sites/brianmazique/2026/11/16/xbox-just-revealed-the-exact-hour-gta-6-starts-streaming-and-it-isnt-midnight/" target="_blank" rel="noopener">Forbes: Xbox Cloud Gaming</a></li></ul></div>
+<h2>Respuestas rápidas</h2><div class="box"><h3>¿A qué hora sale GTA 6?</h3><p style="margin:0">A la medianoche hora local del 19 de noviembre de 2026, región por región. Revisa la hora exacta en la tienda de tu consola.</p></div><div class="sources"><h2 id="sources">Sources</h2><ul class="list"><li><a href="https://www.pushsquare.com/guides/gta-6-release-times-when-can-you-start-playing" target="_blank" rel="noopener">Push Square</a></li><li><a href="https://www.forbes.com/sites/brianmazique/2026/11/16/xbox-just-revealed-the-exact-hour-gta-6-starts-streaming-and-it-isnt-midnight/" target="_blank" rel="noopener">Forbes: Xbox Cloud Gaming</a></li></ul></div>
 <div class="related"><h2>Guías relacionadas</h2><div class="cards"><a class="card pic" href="/es/guias/precio-gta-6/"><img src="/og/t/precio-gta-6.webp" width="480" height="252" alt="Precio de GTA 6 en cada país: España, México, Colombia y Argentina" loading="lazy"><span><b>Precio de GTA 6 en cada país: España, México, Colombia y Argentina</b><small>Cuánto cuesta GTA 6 en España, México, Colombia y Argentina, con fuentes, y por qué en Argentina está entre los más caros del mundo. Revisado el 24 de noviembre.</small></span></a><a class="card pic" href="/es/guias/trucos-gta-6/"><img src="/og/t/trucos-gta-6.webp" width="480" height="252" alt="Trucos de GTA 6: dinero, chaleco, munición y cómo desbloquearlos" loading="lazy"><span><b>Trucos de GTA 6: dinero, chaleco, munición y cómo desbloquearlos</b><small>Trucos verificados de GTA 6 para PS5 y Xbox: el truco de 250.000 $, chaleco, munición infinita, sin recargar y más, cómo se desbloquea cada uno y la trampa (sin guardar ni trofeos).</small></span></a><a class="card pic" href="/es/guias/espacio-gta-6/"><img src="/og/t/espacio-gta-6.webp" width="480" height="252" alt="¿Sin espacio para GTA 6? Cómo liberar espacio en PS5 y Xbox (212 GB)" loading="lazy"><span><b>¿Sin espacio para GTA 6? Cómo liberar espacio en PS5 y Xbox (212 GB)</b><small>GTA 6 necesita hasta 212 GB. Primero las soluciones gratis para liberar espacio en PS5 y Xbox Series X|S, y luego qué buscar si necesitas más almacenamiento.</small></span></a><a class="card pic" href="/es/guias/gta-6-online-cuando-sale/"><img src="/og/t/gta-6-online-cuando-sale.webp" width="480" height="252" alt="GTA 6 Online: ¿cuándo sale? Lo que está confirmado" loading="lazy"><span><b>GTA 6 Online: ¿cuándo sale? Lo que está confirmado</b><small>¿GTA 6 tiene online? Todavía no: Rockstar no anunció un modo multijugador ni fecha. De dónde sale el &#x27;2027&#x27; y qué pasa con GTA Online. Revisado el 24 de noviembre.</small></span></a></div></div>
 </main>
 <footer>Negocios y patrocinios: <a href="mailto:contact@vicereplay.com">contact@vicereplay.com</a> · <a href="/es/acerca/">Quiénes somos</a><br>Vice Replay es un canal de fans y no está afiliado con Rockstar Games ni con Take-Two Interactive. Grand Theft Auto y GTA son marcas de Take-Two Interactive. Como Afiliado de Amazon, gano con las compras que califican: algunos enlaces de este sitio son de afiliado, sin costo extra para ti.</footer>

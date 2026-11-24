@@ -43,6 +43,20 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,7,23,.88) 0%,rgba(13,7,23,.5) 42%,rgba(13,7,23,0) 72%)}
 .banner h1{position:relative;z-index:1;margin:0;padding:18px 20px;max-width:68%}
 .related{margin-top:34px}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:16px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--cyan);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+tr:nth-child(even) td{background:rgba(255,255,255,.035)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 22px;display:grid;gap:2px}
+.toc b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.toc a{color:var(--fg);text-decoration:none;padding:7px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:15px}
+.toc a:last-child{border-bottom:0}
+h2[id]{scroll-margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+.search input{flex:1;font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg)}
+.search input:focus{outline:2px solid var(--pink);border-color:transparent}
+.search span{color:var(--muted);font-size:13px;white-space:nowrap}
+footer a{display:inline-block;padding:6px 0}
 .lead{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:14px;margin:4px 0 18px;border:1px solid var(--line);background:var(--panel-2)}
 .card.pic{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:12px}
 .card.pic img{display:block;width:100%;height:auto;aspect-ratio:40/21;border-radius:8px;background:var(--panel-2)}
@@ -51,23 +65,24 @@ footer{margin-top:44px;color:var(--muted);font-size:13px;border-top:1px solid va
 </head>
 <body>
 <div class="wrap">
-<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
+<nav><a class="brand" href="/">VICE <b>REPLAY</b></a><div class="menu"><a href="/guides/gta-6-launch-live/">News</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a href="https://www.youtube.com/@vicereplaytv-q8s" target="_blank" rel="noopener">YouTube</a></div></nav>
 <main>
 <h1>GTA&nbsp;6 is bigger than <span>Vice City</span></h1>
 <p class="meta">Updated November 13, 2026 · Vice Replay · No story spoilers</p>
-<img class="lead" src="https://vicereplay.com/og/gta-6-map-leonida-places.jpg" width="1200" height="630" alt="GTA 6 Map: 6 Places in Leonida You Need to Know" fetchpriority="high" decoding="async">
 <p class="lede">GTA 6 is set in the state of Leonida, Rockstar's take on Florida. Before launch, Rockstar showed six very different places. Here's what each one is about.</p>
+<img class="lead" src="https://vicereplay.com/og/gta-6-map-leonida-places.jpg" width="1200" height="630" alt="GTA 6 Map: 6 Places in Leonida You Need to Know" fetchpriority="high" decoding="async">
+<nav class="toc" aria-label="On this page"><b>On this page</b><a href="#vice-city">Vice City</a><a href="#leonida-keys">Leonida Keys</a><a href="#grassrivers">Grassrivers</a><a href="#port-gellhorn">Port Gellhorn</a><a href="#ambrosia">Ambrosia</a><a href="#mount-kalaga-national-park">Mount Kalaga National Park</a><a href="#sources">Sources</a></nav>
 <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/GjhaJdjHR4Q" title="GTA 6 Is Bigger Than Vice City: 6 Places to Know" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-<h2>Vice City</h2><p>The neon heart of Leonida, inspired by Miami: beaches, nightlife, money and chaos.</p>
-<h2>Leonida Keys</h2><p>A chain of islands and bridges inspired by the Florida Keys: boats, sunsets and laid-back island towns.</p>
-<h2>Grassrivers</h2><p>Leonida's wetlands, Rockstar's version of the Everglades: swamps, airboats and alligators.</p>
-<h2>Port Gellhorn</h2><p>A fading beach-resort town on the Gulf coast, with its glory days behind it.</p>
-<h2>Ambrosia</h2><p>An industrial town built around a sugar refinery, with a rough biker scene.</p>
-<h2>Mount Kalaga National Park</h2><p>The wild north: forests, trails and back roads for off-road driving and hunting.</p>
+<h2 id="vice-city">Vice City</h2><p>The neon heart of Leonida, inspired by Miami: beaches, nightlife, money and chaos.</p>
+<h2 id="leonida-keys">Leonida Keys</h2><p>A chain of islands and bridges inspired by the Florida Keys: boats, sunsets and laid-back island towns.</p>
+<h2 id="grassrivers">Grassrivers</h2><p>Leonida's wetlands, Rockstar's version of the Everglades: swamps, airboats and alligators.</p>
+<h2 id="port-gellhorn">Port Gellhorn</h2><p>A fading beach-resort town on the Gulf coast, with its glory days behind it.</p>
+<h2 id="ambrosia">Ambrosia</h2><p>An industrial town built around a sugar refinery, with a rough biker scene.</p>
+<h2 id="mount-kalaga-national-park">Mount Kalaga National Park</h2><p>The wild north: forests, trails and back roads for off-road driving and hunting.</p>
 <div class="note">The video uses original concept art made by us, not GTA 6 gameplay. Place descriptions are based on Rockstar's official GTA VI website.</div>
 <div class="box"><h3>Gear for GTA 6 (affiliate links)</h3><p>Getting GTA 6 or making room for it? These searches show current options and prices:</p><div class="btns"><a class="item" href="https://www.amazon.com/dp/B0H6K928WL?tag=vicereplay-20" target="_blank" rel="sponsored noopener">GTA 6 for PS5<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/dp/B0H6K49W6Y?tag=vicereplay-20" target="_blank" rel="sponsored noopener">GTA 6 for Xbox Series X|S<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=PS5+compatible+2TB+NVMe+SSD+with+heatsink&tag=vicereplay-20" target="_blank" rel="sponsored noopener">PS5 storage upgrade (2TB NVMe SSD with heatsink)<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/s?k=Xbox+Series+X+S+storage+expansion+card+2TB&tag=vicereplay-20" target="_blank" rel="sponsored noopener">Xbox Series X|S storage expansion card<span aria-hidden="true">→</span></a><a class="item" href="https://www.amazon.com/tryprimefree?tag=vicereplay-20" target="_blank" rel="sponsored noopener">Free 30-day Amazon Prime trial: fast delivery<span aria-hidden="true">→</span></a></div><p class="sources" style="margin:10px 0 0">Affiliate links: as an Amazon Associate I earn from qualifying purchases, at no extra cost to you. We haven't tested these products; check reviews and compatibility before you buy. <a href="/gear/">All gear picks</a></p></div>
 <div class="box"><h3>Watch more</h3><div class="btns"><a class="item" href="https://www.youtube.com/watch?v=GjhaJdjHR4Q" target="_blank" rel="noopener">Watch this on YouTube<span aria-hidden="true">→</span></a><a class="item" href="https://www.youtube.com/@vicereplaytv-q8s?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Vice Replay<small>New GTA 6 news and Shorts every day</small><span aria-hidden="true">→</span></a></div></div>
-<div class="sources"><h2>Sources</h2><ul class="list"><li><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Rockstar Games: official GTA VI site (places)</a></li></ul></div>
+<div class="sources"><h2 id="sources">Sources</h2><ul class="list"><li><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Rockstar Games: official GTA VI site (places)</a></li></ul></div>
 <div class="related"><h2>Related guides</h2><div class="cards"><a class="card pic" href="/guides/gta-6-map-size/"><img src="/og/t/gta-6-map-size.webp" width="480" height="252" alt="How Big Is the GTA 6 Map? Leonida vs GTA 5 and Red Dead 2" loading="lazy"><span><b>How Big Is the GTA 6 Map? Leonida vs GTA 5 and Red Dead 2</b><small>GTA 6&#x27;s map is reportedly about twice the size of GTA 5&#x27;s, and Vice City alone is said to be twice Los Santos. Here&#x27;s what Rockstar has said and what&#x27;s only estimated.</small></span></a><a class="card pic" href="/guides/gta-6-easter-eggs/"><img src="/og/t/gta-6-easter-eggs.webp" width="480" height="252" alt="GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)" loading="lazy"><span><b>GTA 6 Easter Eggs: The Best Secrets Players Found in Launch Week (No Spoilers)</b><small>The best GTA 6 easter eggs players found in launch week: an actual egg nest on a tower, a UFO abduction, the Skunk Ape, Dexter&#x27;s apartment and a portal to 2002&#x27;s Vice City. No story spoilers.</small></span></a><a class="card pic" href="/guides/gta-6-trophies/"><img src="/og/t/gta-6-trophies.webp" width="480" height="252" alt="GTA 6 Trophies: How Hard Is the Platinum? (55 Trophies, 100%)" loading="lazy"><span><b>GTA 6 Trophies: How Hard Is the Platinum? (55 Trophies, 100%)</b><small>GTA 6 has 55 trophies and the Platinum, &#x27;Vice Got a Price!&#x27;, needs 100% completion: guides say 100 to 200 hours. Who got it first, and what turns trophies off. No story spoilers.</small></span></a><a class="card pic" href="/guides/gta-6-darts/"><img src="/og/t/gta-6-darts.webp" width="480" height="252" alt="Does GTA 6 Have Darts? No, and Rockstar Explains Why (Pool Is In)" loading="lazy"><span><b>Does GTA 6 Have Darts? No, and Rockstar Explains Why (Pool Is In)</b><small>GTA 6 has no darts or bowling. Rockstar North&#x27;s Rob Nelson told VGC why: &quot;even we do not&quot; have unlimited time or money. Pool made it in. Sources inside, no spoilers.</small></span></a></div></div>
 </main>
 <footer>Business &amp; sponsors: <a href="mailto:contact@vicereplay.com">contact@vicereplay.com</a> · <a href="/contact/">Work with us</a> · <a href="/about/">About us</a><br>Vice Replay is a fan channel and is not affiliated with Rockstar Games or Take-Two Interactive. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. As an Amazon Associate I earn from qualifying purchases: some links on this site are affiliate links, at no extra cost to you.</footer>
